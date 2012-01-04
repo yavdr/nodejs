@@ -1,3 +1,9 @@
+nodejs (0.6.6-1chl1~oneiric1) oneiric; urgency=low
+
+  * 0.6.6 (stable) release
+
+ -- Kersten Burkhardt <kerstenk@gmail.com>  Mon, 21 Nov 2011 00:36:21 +0000
+
 nodejs (0.6.2-1chl1~oneiric1) oneiric; urgency=low
 
   * 0.6.2 (stable) release 
