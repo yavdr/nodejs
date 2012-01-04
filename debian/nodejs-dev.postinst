@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  configure)
+        update-alternatives --quiet --install /usr/bin/node-waf node-waf \
+            /usr/bin/nodejs-waf 50 \
+            --slave /usr/share/man/man1/node-waf.1.gz node-waf.1.gz \
+            /usr/share/man/man1/nodejs-waf.1.gz
+        ;;
+  *)
+esac
+
+exit 0
+

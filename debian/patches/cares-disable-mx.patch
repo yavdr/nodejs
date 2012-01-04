@@ -1,0 +1,19 @@
+--- a/src/node_cares.cc
++++ b/src/node_cares.cc
+@@ -340,6 +340,8 @@
+ }
+ 
+ static void ParseAnswerMX(QueryArg *arg, unsigned char* abuf, int alen) {
++  ThrowException(Exception::TypeError(String::New("DNS MX replies not supported in libc-ares 1.7.1")));
++/*
+   HandleScope scope;
+ 
+   struct ares_mx_reply *mx_out;
+@@ -365,6 +367,7 @@
+ 
+   Local<Value> argv[2] = { Local<Value>::New(Null()), mx_records };
+   cb_call(arg->js_cb, 2, argv);
++*/
+ }
+ 
+ 

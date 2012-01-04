@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    remove|deconfigure)
+        update-alternatives --quiet --remove node-waf /usr/bin/nodejs-waf
+        update-alternatives --quiet --remove node-waf.1.gz /usr/share/man/man1/nodejs-waf.1.gz
+        ;;
+    *)
+esac
+
+exit 0

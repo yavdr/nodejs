@@ -1,0 +1,14 @@
+diff -urN node-v0.6.1.orig/wscript node-v0.6.1/wscript
+--- node-v0.6.1.orig/wscript	2011-11-11 22:56:27.000000000 +0000
++++ node-v0.6.1/wscript	2011-11-14 20:41:04.000000000 +0000
+@@ -962,8 +962,8 @@
+     bld.install_files(prefix + '/man/man1/', 'doc/node.1')
+ 
+   bld.install_files('${PREFIX}/bin/', 'tools/node-waf', chmod=0755)
+-  bld.install_files('${LIBDIR}/node/wafadmin', 'tools/wafadmin/*.py')
+-  bld.install_files('${LIBDIR}/node/wafadmin/Tools', 'tools/wafadmin/Tools/*.py')
++  bld.install_files('${PREFIX}/share/nodejs/wafadmin', 'tools/wafadmin/*.py')
++  bld.install_files('${PREFIX}/share/nodejs/wafadmin/Tools', 'tools/wafadmin/Tools/*.py')
+ 
+ def shutdown():
+   Options.options.debug
